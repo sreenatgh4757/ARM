@@ -57,11 +57,11 @@ const ServiceCategory: React.FC<{
           animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: alignRight ? 20 : -20 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="relative w-64 h-64">
+          <div className="relative w-full h-[400px]">
             <img 
               src={imageUrl} 
               alt={title} 
-              className="w-full h-full object-contain animate-float" 
+              className="w-full h-full object-cover rounded-2xl" 
             />
           </div>
         </motion.div>
@@ -202,7 +202,7 @@ const Services: React.FC = () => {
             description: "Comprehensive design deliverables for development."
           }
         ]}
-        imageUrl="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        imageUrl="/Screenshot 2025-06-03 at 3.57.46 PM.png"
         color="secondary"
         alignRight={true}
       />
@@ -227,7 +227,7 @@ const Services: React.FC = () => {
             description: "Continuous tracking of performance and resource utilization."
           }
         ]}
-        imageUrl="https://images.pexels.com/photos/1172675/pexels-photo-1172675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        imageUrl="/Screenshot 2025-06-03 at 3.57.57 PM.png"
         color="accent"
       />
     </section>

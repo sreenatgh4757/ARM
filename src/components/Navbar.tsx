@@ -24,8 +24,8 @@ const Navbar: React.FC = () => {
       <div className="container-custom mx-auto py-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex flex-col">
-            <span className="text-white font-bold text-2xl leading-tight">A.R.M</span>
-            <span className="text-sm text-gray-400">Technologies Ltd.</span>
+            <span className="text-white font-bold text-2xl leading-tight bg-gradient-to-r from-white to-primary bg-clip-text text-transparent">A.R.M</span>
+            <span className="text-sm bg-gradient-to-r from-gray-400 to-gray-500 bg-clip-text text-transparent">Technologies Ltd.</span>
           </Link>
 
           {/* Desktop Menu */}

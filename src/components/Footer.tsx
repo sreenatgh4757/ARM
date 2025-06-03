@@ -13,8 +13,8 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <Link to="/" className="mb-4 flex flex-col">
-              <span className="text-white font-bold text-2xl leading-tight">A.R.M</span>
-              <span className="text-sm text-gray-400">Technologies Ltd.</span>
+              <span className="text-white font-bold text-2xl leading-tight bg-gradient-to-r from-white to-primary bg-clip-text text-transparent">A.R.M</span>
+              <span className="text-sm bg-gradient-to-r from-gray-400 to-gray-500 bg-clip-text text-transparent">Technologies Ltd.</span>
             </Link>
             
             <p className="text-gray-400 mb-6">
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary mt-0.5" />
                 <span className="text-gray-400">
-                  Regent, Oxford Point,<br/>
+                  Regus, Oxford Point,<br/>
                   Bournemouth, England,<br/>
                   BH10 4DZ
                 </span>
@@ -83,15 +83,15 @@ const Footer: React.FC = () => {
               
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary" />
-                <a href="mailto:hello@armtechnologies.com" className="text-gray-400 hover:text-primary transition-colors">
-                  hello@armtechnologies.com
+                <a href="mailto:info@armtechnologies.ltd" className="text-gray-400 hover:text-primary transition-colors">
+                  info@armtechnologies.ltd
                 </a>
               </div>
               
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-primary" />
-                <a href="tel:+441234567890" className="text-gray-400 hover:text-primary transition-colors">
-                  +44 (0) 1234 567890
+                <a href="tel:+447823857523" className="text-gray-400 hover:text-primary transition-colors">
+                  +44 7823857523
                 </a>
               </div>
             </div>
