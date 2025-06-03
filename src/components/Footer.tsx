@@ -12,16 +12,9 @@ const Footer: React.FC = () => {
       <div className="container-custom mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <Link to="/" className="mb-4 flex items-center gap-2">
-              <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
-                <div className="h-8 w-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold">
-                  A
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-white font-bold text-lg leading-tight">A.R.M</span>
-                <span className="text-xs text-gray-400">Technologies Ltd.</span>
-              </div>
+            <Link to="/" className="mb-4 flex flex-col">
+              <span className="text-white font-bold text-2xl leading-tight">A.R.M</span>
+              <span className="text-sm text-gray-400">Technologies Ltd.</span>
             </Link>
             
             <p className="text-gray-400 mb-6">
