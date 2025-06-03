@@ -202,7 +202,7 @@ const Services: React.FC = () => {
             description: "Comprehensive design deliverables for development."
           }
         ]}
-        imageUrl="/Screenshot 2025-06-03 at 3.57.46 PM.png"
+        imageUrl="/Screenshot 2025-06-03 at 4.12.01 PM.png"
         color="secondary"
         alignRight={true}
       />
