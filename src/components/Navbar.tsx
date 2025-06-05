@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import AnimatedLogo from './AnimatedLogo';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,13 +24,7 @@ const Navbar: React.FC = () => {
     >
       <div className="container-custom mx-auto py-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center">
-            <img 
-              src="/WhatsApp Image 2025-06-04 at 12.21.32.jpeg" 
-              alt="A.R.M Technologies Ltd" 
-              className="h-12 w-auto"
-            />
-          </Link>
+          <AnimatedLogo />
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">

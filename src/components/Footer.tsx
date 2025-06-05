@@ -1,6 +1,7 @@
 import React from 'react';
 import { Clock, MapPin, Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import AnimatedLogo from './AnimatedLogo';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -12,13 +13,7 @@ const Footer: React.FC = () => {
       <div className="container-custom mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <Link to="/" className="mb-4 block">
-              <img 
-                src="/WhatsApp Image 2025-06-04 at 12.21.32.jpeg" 
-                alt="A.R.M Technologies Ltd" 
-                className="h-12 w-auto"
-              />
-            </Link>
+            <AnimatedLogo className="mb-4" />
             
             <p className="text-gray-400 mb-6">
               We provide cutting-edge software solutions to help businesses transform their digital presence and operations.
