@@ -12,9 +12,12 @@ const Footer: React.FC = () => {
       <div className="container-custom mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <Link to="/" className="mb-4 flex flex-col">
-              <span className="text-white font-bold text-2xl leading-tight bg-gradient-to-r from-white to-primary bg-clip-text text-transparent">A.R.M</span>
-              <span className="text-sm bg-gradient-to-r from-gray-400 to-gray-500 bg-clip-text text-transparent">Technologies Ltd.</span>
+            <Link to="/" className="mb-4 block">
+              <img 
+                src="/WhatsApp Image 2025-06-04 at 12.21.32.jpeg" 
+                alt="A.R.M Technologies Ltd" 
+                className="h-12 w-auto"
+              />
             </Link>
             
             <p className="text-gray-400 mb-6">

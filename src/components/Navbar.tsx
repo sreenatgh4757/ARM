@@ -23,9 +23,12 @@ const Navbar: React.FC = () => {
     >
       <div className="container-custom mx-auto py-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex flex-col">
-            <span className="text-white font-bold text-2xl leading-tight bg-gradient-to-r from-white to-primary bg-clip-text text-transparent">A.R.M</span>
-            <span className="text-sm bg-gradient-to-r from-gray-400 to-gray-500 bg-clip-text text-transparent">Technologies Ltd.</span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/WhatsApp Image 2025-06-04 at 12.21.32.jpeg" 
+              alt="A.R.M Technologies Ltd" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Menu */}
