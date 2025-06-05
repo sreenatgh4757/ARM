@@ -4,18 +4,15 @@ import { motion } from 'framer-motion';
 
 const AnimatedLogo: React.FC<{ className?: string }> = ({ className = '' }) => {
   return (
-    <Link to="/" className={`block relative ${className}`}>
+    <Link to="/" className={`block ${className}`}>
       <motion.div
-        className="relative"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
+        className="flex flex-col"
       >
-        <div className="text-4xl font-bold leading-none tracking-wider relative z-10 animate-gradient">
-          <span className="block">A.R.M</span>
-          <span className="text-lg font-medium block mt-1">Technologies Ltd</span>
-        </div>
-        <div className="absolute inset-0 animate-glow blur-sm z-0" />
+        <span className="text-2xl font-bold leading-tight animate-logo-text">A.R.M</span>
+        <span className="text-sm animate-logo-subtext">Technologies Ltd</span>
       </motion.div>
     </Link>
   );

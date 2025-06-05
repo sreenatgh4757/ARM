@@ -56,7 +56,6 @@ spline-viewer {
   }
 }
 
-/* Animation utilities */
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
@@ -66,24 +65,30 @@ spline-viewer {
   }
 }
 
-@keyframes gradient {
+@keyframes logo-text {
   0% {
     background-position: 0% 50%;
+    filter: brightness(1);
   }
   50% {
     background-position: 100% 50%;
+    filter: brightness(1.2);
   }
   100% {
     background-position: 0% 50%;
+    filter: brightness(1);
   }
 }
 
-@keyframes glow {
-  0%, 100% {
-    opacity: 0.2;
+@keyframes logo-subtext {
+  0% {
+    opacity: 0.7;
   }
   50% {
-    opacity: 0.4;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
   }
 }
 
@@ -99,17 +104,19 @@ spline-viewer {
   animation: float 4s ease-in-out infinite;
 }
 
-.animate-gradient {
-  background: linear-gradient(90deg, #8A2BE2, #0000FF, #8A2BE2);
+.animate-logo-text {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient 3s linear infinite;
+  color: transparent;
+  animation: logo-text 2s ease-in-out infinite;
 }
 
-.animate-glow {
-  background: linear-gradient(90deg, #8A2BE2, #0000FF, #8A2BE2);
-  background-size: 200% auto;
-  animation: gradient 3s linear infinite, glow 3s ease-in-out infinite;
+.animate-logo-subtext {
+  background: linear-gradient(90deg, #9CA3AF, #6B7280);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: logo-subtext 2s ease-in-out infinite;
 }
