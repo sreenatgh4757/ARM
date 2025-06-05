@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const AnimatedLogo: React.FC<{ className?: string }> = ({ className = '' }) => {
   return (
-    <Link to="/" className={`block ${className}`}>
+    <Link to="/\" className={`block ${className}`}>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

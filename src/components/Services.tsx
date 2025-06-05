@@ -202,7 +202,7 @@ const Services: React.FC = () => {
             description: "Comprehensive design deliverables for development."
           }
         ]}
-        imageUrl="/Screenshot 2025-06-03 at 4.12.01 PM.png"
+        imageUrl="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         color="secondary"
         alignRight={true}
       />
@@ -227,7 +227,7 @@ const Services: React.FC = () => {
             description: "Continuous tracking of performance and resource utilization."
           }
         ]}
-        imageUrl="/Screenshot 2025-06-03 at 3.57.57 PM.png"
+        imageUrl="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         color="accent"
       />
     </section>
