@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Calendar } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -45,14 +45,6 @@ const Hero: React.FC = () => {
             >
               Speak to Our Experts
               <ArrowRight size={20} />
-            </a>
-            
-            <a 
-              href="#services" 
-              className="border border-gray-600 hover:border-primary text-white px-8 py-4 rounded-full transition-all duration-300 flex items-center gap-2"
-            >
-              <Calendar size={20} />
-              View Our Services
             </a>
           </motion.div>
         </motion.div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Award, Zap, Shield, Users } from 'lucide-react';
+import { Award, Zap, Shield } from 'lucide-react';
 
 const WhyChooseUs: React.FC = () => {
   const [ref, inView] = useInView({
@@ -12,23 +12,18 @@ const WhyChooseUs: React.FC = () => {
   const reasons = [
     {
       icon: <Award size={32} />,
-      title: "Experts in AI & DevOps Integration",
+      title: "AI + DevOps Integration",
       description: "Our team combines deep expertise in artificial intelligence with proven DevOps practices to deliver seamless, intelligent automation solutions."
     },
     {
       icon: <Zap size={32} />,
-      title: "Real-world Automation Workflows",
+      title: "Real-World Automation Experience",
       description: "We don't just build theoretical solutions. Our automation workflows are battle-tested in production environments across various industries."
     },
     {
       icon: <Shield size={32} />,
-      title: "UK Sponsorship-Ready for Contracts",
+      title: "UK Contract Ready",
       description: "Fully compliant with UK regulations and ready to provide sponsorship support for international talent joining your projects."
-    },
-    {
-      icon: <Users size={32} />,
-      title: "Enterprise-Grade Support",
-      description: "24/7 monitoring, dedicated support teams, and comprehensive maintenance to ensure your systems run smoothly at all times."
     }
   ];
 
@@ -50,16 +45,16 @@ const WhyChooseUs: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reasons.map((reason, index) => (
             <motion.div
               key={index}
-              className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-card/70 transition-all duration-300"
+              className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-card/70 transition-all duration-300 text-center"
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className="text-primary mb-4">
+              <div className="text-primary mb-4 flex justify-center">
                 {reason.icon}
               </div>
               <h3 className="text-xl font-bold mb-3 text-white">

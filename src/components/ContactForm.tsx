@@ -7,9 +7,6 @@ const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
-    phone: '',
-    service: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -20,15 +17,7 @@ const ContactForm: React.FC = () => {
     threshold: 0.1,
   });
 
-  const services = [
-    'AI Automation',
-    'Agentic AI Systems',
-    'DevOps & Cloud Infrastructure',
-    'Contract Support & UK Sponsorship',
-    'General Consultation'
-  ];
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
@@ -44,9 +33,6 @@ const ContactForm: React.FC = () => {
       setFormData({
         name: '',
         email: '',
-        company: '',
-        phone: '',
-        service: '',
         message: ''
       });
     } catch (error) {
@@ -92,9 +78,7 @@ const ContactForm: React.FC = () => {
                 <div>
                   <h4 className="font-semibold text-white mb-1">Office Location</h4>
                   <p className="text-gray-300">
-                    Regus, Oxford Point<br />
-                    Bournemouth, England<br />
-                    BH10 4DZ
+                    London, United Kingdom
                   </p>
                 </div>
               </div>
@@ -121,10 +105,10 @@ const ContactForm: React.FC = () => {
                 <div>
                   <h4 className="font-semibold text-white mb-1">Phone</h4>
                   <a 
-                    href="tel:+447823857523" 
+                    href="tel:+447000000000" 
                     className="text-gray-300 hover:text-primary transition-colors"
                   >
-                    +44 7823857523
+                    +44 7000 000 000
                   </a>
                 </div>
               </div>
@@ -157,88 +141,36 @@ const ContactForm: React.FC = () => {
             )}
 
             <form onSubmit={handleSubmit} className="bg-card/50 backdrop-blur-sm rounded-2xl p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="name" className="block text-white font-medium mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full bg-background/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                    placeholder="John Doe"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-white font-medium mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full bg-background/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                    placeholder="john@company.com"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="company" className="block text-white font-medium mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full bg-background/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                    placeholder="Your Company"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="phone" className="block text-white font-medium mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full bg-background/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                    placeholder="+44 XXXX XXXXXX"
-                  />
-                </div>
-              </div>
-
               <div className="mb-6">
-                <label htmlFor="service" className="block text-white font-medium mb-2">
-                  Service of Interest
+                <label htmlFor="name" className="block text-white font-medium mb-2">
+                  Full Name *
                 </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  value={formData.name}
                   onChange={handleChange}
-                  className="w-full bg-background/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
-                >
-                  <option value="">Select a service...</option>
-                  {services.map((service, index) => (
-                    <option key={index} value={service}>{service}</option>
-                  ))}
-                </select>
+                  className="w-full bg-background/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                  placeholder="John Doe"
+                />
+              </div>
+              
+              <div className="mb-6">
+                <label htmlFor="email" className="block text-white font-medium mb-2">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full bg-background/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
+                  placeholder="john@company.com"
+                />
               </div>
 
               <div className="mb-6">

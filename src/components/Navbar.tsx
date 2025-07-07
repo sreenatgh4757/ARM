@@ -27,10 +27,7 @@ const Navbar: React.FC = () => {
             <div className="bg-primary/20 p-2 rounded-lg">
               <Bot className="text-primary" size={24} />
             </div>
-            <div className="flex flex-col">
-              <span className="text-white font-bold text-xl leading-tight">ARM Technologies</span>
-              <span className="text-xs text-gray-400">AI Automation & DevOps</span>
-            </div>
+            <span className="text-white font-bold text-xl">ARM Technologies LTD</span>
           </Link>
 
           {/* Desktop Menu */}

@@ -88,7 +88,7 @@ const Services: React.FC = () => {
       delay: 0.1
     },
     {
-      title: "Agentic AI Systems",
+      title: "Agentic AI",
       description: "Deploy autonomous AI agents that can reason, plan, and execute complex tasks independently while maintaining human oversight.",
       features: [
         "Autonomous Decision Making",

@@ -1,28 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Download, GitBranch, Bot, Cloud } from 'lucide-react';
+import { ArrowRight, Bot, Database, Cloud, Zap } from 'lucide-react';
 
 const ArchitectureDiagrams: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  const diagrams = [
-    {
-      title: "AI-Powered Automation Workflow",
-      description: "End-to-end intelligent automation pipeline with machine learning integration and real-time decision making.",
-      icon: <Bot size={24} />,
-      placeholder: "AI Workflow Diagram"
-    },
-    {
-      title: "DevOps CI/CD Pipeline",
-      description: "Automated deployment pipeline with integrated testing, security scanning, and cloud deployment orchestration.",
-      icon: <GitBranch size={24} />,
-      placeholder: "DevOps Pipeline Diagram"
-    }
-  ];
 
   return (
     <section className="py-20 bg-gradient-to-b from-background/95 to-background">
@@ -35,62 +20,75 @@ const ArchitectureDiagrams: React.FC = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our <span className="text-gradient">Automation Workflows</span>
+            Our <span className="text-gradient">Intelligent Automation Flow</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Visualize how our intelligent systems integrate with your existing infrastructure 
-            to deliver seamless automation solutions.
+            Visualize how our AI-powered systems integrate seamlessly with your existing infrastructure.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {diagrams.map((diagram, index) => (
-            <motion.div
-              key={index}
-              className="bg-card/50 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-card/70 transition-all duration-300"
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-            >
-              {/* Diagram Placeholder */}
-              <div className="h-64 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-                <div className="text-center z-10">
-                  <div className="text-primary mb-4">
-                    {diagram.icon}
+        <motion.div
+          className="max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 relative overflow-hidden">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+            
+            {/* Workflow Diagram */}
+            <div className="relative z-10">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
+                {/* Step 1: Data Input */}
+                <div className="text-center">
+                  <div className="bg-primary/20 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                    <Database className="text-primary" size={24} />
                   </div>
-                  <div className="text-white font-medium">
-                    {diagram.placeholder}
-                  </div>
-                  <div className="text-sm text-gray-400 mt-2">
-                    Visual representation
-                  </div>
+                  <h4 className="text-white font-semibold mb-2">Data Input</h4>
+                  <p className="text-gray-400 text-sm">Raw data collection from multiple sources</p>
                 </div>
-                
-                {/* Decorative elements */}
-                <div className="absolute top-4 left-4 w-8 h-8 border-2 border-primary/30 rounded-full"></div>
-                <div className="absolute bottom-4 right-4 w-6 h-6 border-2 border-secondary/30 rounded-full"></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <Cloud className="text-accent/20" size={48} />
+
+                {/* Arrow */}
+                <div className="hidden md:flex justify-center">
+                  <ArrowRight className="text-primary" size={24} />
+                </div>
+
+                {/* Step 2: AI Processing */}
+                <div className="text-center">
+                  <div className="bg-secondary/20 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                    <Bot className="text-secondary" size={24} />
+                  </div>
+                  <h4 className="text-white font-semibold mb-2">AI Processing</h4>
+                  <p className="text-gray-400 text-sm">Intelligent analysis and decision making</p>
+                </div>
+
+                {/* Arrow */}
+                <div className="hidden md:flex justify-center">
+                  <ArrowRight className="text-primary" size={24} />
+                </div>
+
+                {/* Step 3: Automated Action */}
+                <div className="text-center">
+                  <div className="bg-accent/20 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                    <Zap className="text-accent" size={24} />
+                  </div>
+                  <h4 className="text-white font-semibold mb-2">Automated Action</h4>
+                  <p className="text-gray-400 text-sm">Seamless execution across systems</p>
                 </div>
               </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-white">
-                  {diagram.title}
-                </h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">
-                  {diagram.description}
-                </p>
-                
-                <button className="text-primary hover:text-primary-dark font-medium flex items-center gap-2 transition-colors">
-                  <Download size={16} />
-                  Download PDF
-                </button>
+
+              {/* Central Cloud Integration */}
+              <div className="mt-8 text-center">
+                <div className="bg-gradient-to-r from-primary/20 to-secondary/20 p-6 rounded-xl inline-block">
+                  <Cloud className="text-primary mx-auto mb-2" size={32} />
+                  <h4 className="text-white font-semibold">Cloud Infrastructure</h4>
+                  <p className="text-gray-400 text-sm">Scalable, secure, and monitored</p>
+                </div>
               </div>
-            </motion.div>
-          ))}
-        </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

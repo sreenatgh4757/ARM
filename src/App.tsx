@@ -8,7 +8,6 @@ import ArchitectureDiagrams from './components/ArchitectureDiagrams';
 import BlogSection from './components/BlogSection';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
-import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -26,7 +25,6 @@ function App() {
               <ContactForm />
             </>
           } />
-          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>

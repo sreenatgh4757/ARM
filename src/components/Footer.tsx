@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bot, Clock, MapPin, Mail, Phone, Linkedin, Twitter, Github } from 'lucide-react';
+import { Bot, MapPin, Mail, Phone, Linkedin, Twitter, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
@@ -16,23 +16,13 @@ const Footer: React.FC = () => {
               <div className="bg-primary/20 p-2 rounded-lg">
                 <Bot className="text-primary" size={20} />
               </div>
-              <div className="flex flex-col">
-                <span className="text-white font-bold text-lg leading-tight">ARM Technologies</span>
-                <span className="text-xs text-gray-400">AI Automation & DevOps</span>
-              </div>
+              <span className="text-white font-bold text-lg">ARM Technologies LTD</span>
             </Link>
             
             <p className="text-gray-400 mb-6 leading-relaxed">
               Empowering businesses with cutting-edge AI automation solutions, 
               intelligent systems, and enterprise-grade DevOps infrastructure.
             </p>
-            
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <Clock className="h-4 w-4 text-primary" />
-                <span className="text-gray-300 text-sm">Est. 2023</span>
-              </div>
-            </div>
           </div>
           
           <div>
@@ -43,8 +33,7 @@ const Footer: React.FC = () => {
                 'Agentic AI Systems',
                 'DevOps & Cloud Infrastructure',
                 'Contract Support',
-                'UK Sponsorship Services',
-                'Enterprise Consulting'
+                'UK Sponsorship Services'
               ].map((service, index) => (
                 <li key={index}>
                   <a href="#services" className="text-gray-400 hover:text-primary transition-colors text-sm">
@@ -61,9 +50,7 @@ const Footer: React.FC = () => {
               {[
                 { name: 'About Us', href: '#about' },
                 { name: 'Our Services', href: '#services' },
-                { name: 'Case Studies', href: '#case-studies' },
                 { name: 'Blog', href: '#blog' },
-                { name: 'Careers', href: '#careers' },
                 { name: 'Contact', href: '#contact' }
               ].map((link, index) => (
                 <li key={index}>
@@ -81,9 +68,7 @@ const Footer: React.FC = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                 <span className="text-gray-400 text-sm">
-                  Regus, Oxford Point,<br/>
-                  Bournemouth, England,<br/>
-                  BH10 4DZ
+                  London, United Kingdom
                 </span>
               </div>
               
@@ -96,8 +81,8 @@ const Footer: React.FC = () => {
               
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                <a href="tel:+447823857523" className="text-gray-400 hover:text-primary transition-colors text-sm">
-                  +44 7823857523
+                <a href="tel:+447000000000" className="text-gray-400 hover:text-primary transition-colors text-sm">
+                  +44 7000 000 000
                 </a>
               </div>
             </div>
@@ -130,9 +115,6 @@ const Footer: React.FC = () => {
             </a>
             <a href="#terms" className="text-gray-500 hover:text-primary transition-colors">
               Terms of Service
-            </a>
-            <a href="#cookies" className="text-gray-500 hover:text-primary transition-colors">
-              Cookie Policy
             </a>
           </div>
         </div>
