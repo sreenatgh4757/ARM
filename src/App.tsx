@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import WhyChooseUs from './components/WhyChooseUs';
+import ArchitectureDiagrams from './components/ArchitectureDiagrams';
+import BlogSection from './components/BlogSection';
+import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
 
@@ -16,6 +20,10 @@ function App() {
             <>
               <Hero />
               <Services />
+              <WhyChooseUs />
+              <ArchitectureDiagrams />
+              <BlogSection />
+              <ContactForm />
             </>
           } />
           <Route path="/contact" element={<Contact />} />

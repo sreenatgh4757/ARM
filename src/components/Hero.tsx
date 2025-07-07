@@ -1,65 +1,61 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TypeAnimation } from 'react-type-animation';
-
-const headlines = [
-  "Elevate Your Business with Cutting Edge Software Solutions",
-  "Transform Tomorrow with AI-Powered Innovation",
-  "Architect the Future of Digital Excellence",
-  "Unleash Enterprise Potential Through Smart Technology",
-  "Pioneer Next-Gen Solutions with Advanced AI",
-  "Revolutionize Business with Intelligent Systems",
-  "Accelerate Growth with Future-Ready Solutions",
-  "Drive Innovation with Enterprise-Grade Technology",
-  "Shape Tomorrow's Digital Landscape Today",
-  "Empower Success Through Technical Excellence"
-];
+import { ArrowRight, Calendar } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative h-screen w-screen overflow-hidden">
-      {/* Fullscreen Spline Background */}
-      <div className="absolute inset-0 w-full h-full">
-        <spline-viewer url="https://prod.spline.design/qSJQNnUNNRkHiaJA/scene.splinecode"></spline-viewer>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2" 
+          alt="AI Automation Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/95"></div>
       </div>
       
-      {/* Gradient Overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80"></div>
-      
-      {/* Centered Content */}
-      <div className="relative z-20 h-full flex items-center justify-center">
-        <div className="container-custom mx-auto px-4">
-          <motion.div 
-            className="max-w-2xl mx-auto text-center"
+      {/* Content */}
+      <div className="relative z-10 container-custom mx-auto px-4 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl mx-auto"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Empowering Businesses with{' '}
+            <span className="text-gradient">AI-Powered Automation</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Specializing in intelligent Agentic AI solutions, scalable DevOps automation, 
+            and enterprise-grade support for forward-thinking organizations.
+          </p>
+          
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight min-h-[180px]">
-              <TypeAnimation
-                sequence={headlines.flatMap(headline => [headline, 4000])}
-                wrapper="span"
-                speed={50}
-                repeat={Infinity}
-                className="text-gradient"
-              />
-            </h1>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-              className="mt-8"
+            <a 
+              href="#contact" 
+              className="btn-primary text-lg px-8 py-4 flex items-center gap-2"
             >
-              <a 
-                href="#contact" 
-                className="inline-flex items-center justify-center px-6 py-2 text-sm font-medium bg-primary hover:bg-primary-dark text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-primary/20"
-              >
-                Get Started
-              </a>
-            </motion.div>
+              Speak to Our Experts
+              <ArrowRight size={20} />
+            </a>
+            
+            <a 
+              href="#services" 
+              className="border border-gray-600 hover:border-primary text-white px-8 py-4 rounded-full transition-all duration-300 flex items-center gap-2"
+            >
+              <Calendar size={20} />
+              View Our Services
+            </a>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

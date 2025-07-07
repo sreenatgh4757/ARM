@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, MapPin, Mail, Phone } from 'lucide-react';
+import { Bot, Clock, MapPin, Mail, Phone, Linkedin, Twitter, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
@@ -12,18 +12,24 @@ const Footer: React.FC = () => {
       <div className="container-custom mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <Link to="/" className="mb-4 flex flex-col">
-              <span className="text-white font-bold text-2xl leading-tight bg-gradient-to-r from-white to-primary bg-clip-text text-transparent">A.R.M</span>
-              <span className="text-sm bg-gradient-to-r from-gray-400 to-gray-500 bg-clip-text text-transparent">Technologies Ltd.</span>
+            <Link to="/" className="flex items-center gap-3 mb-4">
+              <div className="bg-primary/20 p-2 rounded-lg">
+                <Bot className="text-primary" size={20} />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-white font-bold text-lg leading-tight">ARM Technologies</span>
+                <span className="text-xs text-gray-400">AI Automation & DevOps</span>
+              </div>
             </Link>
             
-            <p className="text-gray-400 mb-6">
-              We provide cutting-edge software solutions to help businesses transform their digital presence and operations.
+            <p className="text-gray-400 mb-6 leading-relaxed">
+              Empowering businesses with cutting-edge AI automation solutions, 
+              intelligent systems, and enterprise-grade DevOps infrastructure.
             </p>
             
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <Clock className="h-5 w-5 text-primary" />
+                <Clock className="h-4 w-4 text-primary" />
                 <span className="text-gray-300 text-sm">Est. 2023</span>
               </div>
             </div>
@@ -33,48 +39,48 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-semibold text-lg mb-6">Services</h3>
             <ul className="space-y-3">
               {[
-                'Software Development',
-                'UI/UX Design',
-                'DevOps & Cloud',
-                'Mobile App Development',
-                'Web Applications',
-                'E-commerce Solutions'
+                'AI Automation',
+                'Agentic AI Systems',
+                'DevOps & Cloud Infrastructure',
+                'Contract Support',
+                'UK Sponsorship Services',
+                'Enterprise Consulting'
               ].map((service, index) => (
                 <li key={index}>
-                  <Link to="/#services" className="text-gray-400 hover:text-primary transition-colors">
+                  <a href="#services" className="text-gray-400 hover:text-primary transition-colors text-sm">
                     {service}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
           
           <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Quick Links</h3>
+            <h3 className="text-white font-semibold text-lg mb-6">Company</h3>
             <ul className="space-y-3">
               {[
-                { name: 'Home', href: '/' },
-                { name: 'Services', href: '/#services' },
-                { name: 'About', href: '/#about' },
-                { name: 'Contact', href: '/contact' },
-                { name: 'Privacy Policy', href: '/privacy' },
-                { name: 'Terms of Service', href: '/terms' }
+                { name: 'About Us', href: '#about' },
+                { name: 'Our Services', href: '#services' },
+                { name: 'Case Studies', href: '#case-studies' },
+                { name: 'Blog', href: '#blog' },
+                { name: 'Careers', href: '#careers' },
+                { name: 'Contact', href: '#contact' }
               ].map((link, index) => (
                 <li key={index}>
-                  <Link to={link.href} className="text-gray-400 hover:text-primary transition-colors">
+                  <a href={link.href} className="text-gray-400 hover:text-primary transition-colors text-sm">
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
           
           <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Contact Us</h3>
+            <h3 className="text-white font-semibold text-lg mb-6">Contact Info</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-primary mt-0.5" />
-                <span className="text-gray-400">
+                <MapPin className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <span className="text-gray-400 text-sm">
                   Regus, Oxford Point,<br/>
                   Bournemouth, England,<br/>
                   BH10 4DZ
@@ -82,16 +88,31 @@ const Footer: React.FC = () => {
               </div>
               
               <div className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-primary" />
-                <a href="mailto:info@armtechnologies.ltd" className="text-gray-400 hover:text-primary transition-colors">
+                <Mail className="h-4 w-4 text-primary flex-shrink-0" />
+                <a href="mailto:info@armtechnologies.ltd" className="text-gray-400 hover:text-primary transition-colors text-sm">
                   info@armtechnologies.ltd
                 </a>
               </div>
               
               <div className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-primary" />
-                <a href="tel:+447823857523" className="text-gray-400 hover:text-primary transition-colors">
+                <Phone className="h-4 w-4 text-primary flex-shrink-0" />
+                <a href="tel:+447823857523" className="text-gray-400 hover:text-primary transition-colors text-sm">
                   +44 7823857523
+                </a>
+              </div>
+            </div>
+            
+            <div className="mt-6">
+              <h4 className="text-white font-medium mb-3">Follow Us</h4>
+              <div className="flex gap-3">
+                <a href="#" className="bg-gray-800 hover:bg-primary/20 p-2 rounded-lg transition-colors">
+                  <Linkedin className="h-4 w-4 text-gray-400 hover:text-primary" />
+                </a>
+                <a href="#" className="bg-gray-800 hover:bg-primary/20 p-2 rounded-lg transition-colors">
+                  <Twitter className="h-4 w-4 text-gray-400 hover:text-primary" />
+                </a>
+                <a href="#" className="bg-gray-800 hover:bg-primary/20 p-2 rounded-lg transition-colors">
+                  <Github className="h-4 w-4 text-gray-400 hover:text-primary" />
                 </a>
               </div>
             </div>
@@ -100,16 +121,19 @@ const Footer: React.FC = () => {
         
         <div className="mt-12 pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            &copy; {currentYear} A.R.M Technologies Limited. All rights reserved.
+            &copy; {currentYear} ARM Technologies Limited. All rights reserved.
           </p>
           
-          <div className="flex gap-6">
-            <Link to="/privacy" className="text-gray-500 hover:text-primary transition-colors">
+          <div className="flex gap-6 text-sm">
+            <a href="#privacy" className="text-gray-500 hover:text-primary transition-colors">
               Privacy Policy
-            </Link>
-            <Link to="/terms" className="text-gray-500 hover:text-primary transition-colors">
+            </a>
+            <a href="#terms" className="text-gray-500 hover:text-primary transition-colors">
               Terms of Service
-            </Link>
+            </a>
+            <a href="#cookies" className="text-gray-500 hover:text-primary transition-colors">
+              Cookie Policy
+            </a>
           </div>
         </div>
       </div>

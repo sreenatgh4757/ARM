@@ -25,15 +25,6 @@ body {
   background-color: var(--background);
 }
 
-/* Make Spline viewer take full size of container */
-spline-viewer {
-  width: 100% !important;
-  height: 100% !important;
-  position: absolute !important;
-  top: 0;
-  left: 0;
-}
-
 @layer components {
   .glow {
     filter: drop-shadow(0 0 0.5rem var(--primary));
@@ -53,6 +44,13 @@ spline-viewer {
   
   .section {
     @apply py-16 md:py-24;
+  }
+  
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(rgba(162, 136, 227, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(162, 136, 227, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
   }
 }
 
@@ -76,4 +74,22 @@ spline-viewer {
 
 .animate-float-fast {
   animation: float 4s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
 }
